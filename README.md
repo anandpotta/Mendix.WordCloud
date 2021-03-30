@@ -1,5 +1,5 @@
 ## WordCloud
-Show word cloud based on react-d3-cloud library.
+A Mendix widget that displays a set of words based on the react-d3-cloud library in a form of a cloud.
 
 ## Features
 [feature highlights]
