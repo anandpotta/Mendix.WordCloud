@@ -1,5 +1,5 @@
 ## WordCloud
-Show word cloud based on react-d3-cloud
+Show word cloud based on react-d3-cloud library.
 
 ## Features
 [feature highlights]
