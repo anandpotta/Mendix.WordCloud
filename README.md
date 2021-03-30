@@ -1,6 +1,5 @@
 ## WordCloud
-[Show word cloud based on react-d3-cloud]
-test
+Show word cloud based on react-d3-cloud
 
 ## Features
 [feature highlights]
