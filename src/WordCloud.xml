@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="objectivity.wordcloud.WordCloud" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Word Cloud</name>
+    <description>Show word cloud based on react-d3-cloud</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+           <property key="dataSource" type="datasource" isList="true" required="false">
+                <caption>Data source</caption>
+                <description>The list of objects to be used for rendering in the WordCloud, should contain a text attribute and a numeric attribute.</description>
+            </property>
+            <property key="textAttrib" type="attribute" required="false" dataSource="dataSource">
+                <caption>Text attribute</caption>
+                <description>Text attribute</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="intAttrib" type="attribute" required="false" dataSource="dataSource">
+                <caption>Int attribute</caption>
+                <description>Int attribute</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Action">
+                <property key="onClickAction" type="action" required="false">
+                    <caption>On click</caption>
+                    <description>This action will be called once user clicks on the word.</description>
+                </property>
+        </propertyGroup>
+        <propertyGroup caption="Control">
+             <property key="chosenWord" type="attribute">
+                <caption>Chosen word</caption>
+                <description>This attribute stores the clicked word</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
