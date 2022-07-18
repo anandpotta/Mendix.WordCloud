@@ -26,6 +26,18 @@
                     <attributeType name="Integer"/>
                 </attributeTypes>
             </property>
+            <property key="tagCloudWidth" type="integer" defaultValue="360">
+                <caption>Specify Width in Integer</caption>
+                <description />
+            </property>
+            <property key="tagCloudHeight" type="integer" defaultValue="160">
+                <caption>Specify Height in Integer</caption>
+                <description />
+            </property>
+            <property key="tagCloudPadding" type="integer" defaultValue="3">
+                <caption>Specify Text Padding in Integer</caption>
+                <description />
+            </property>
         </propertyGroup>
         <propertyGroup caption="Action">
                 <property key="onClickAction" type="action" required="false">
