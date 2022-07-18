@@ -9,7 +9,7 @@ import WordCloud from "react-d3-cloud";
 export default function WordCloudWidgetComponent(props) {
   
   const data = props.inputData;
-  debugger;
+  
 
   const fontSizeMapper = word => Math.log2(word.value) * 5;
   const fontSize = (word) => Math.log2(word.value) * 5;
