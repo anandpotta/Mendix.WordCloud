@@ -1,17 +1,18 @@
-import React, {createElement} from "react";
-import WordCloudWidgetComponent from "./components/WordCloudWidgetComponent.jsx";
+import React from 'react';
+import 'core-js';
+import { Component, createElement, render } from "react";
 
-export default class WordCloudWidget extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.getJSONVal=this.getJSONVal.bind(this);
-    }
+
+import WordCloudWidgetComponent from "./components/WordCloudWidgetComponent";
+
+
+export default class WordCloudWidget extends Component {
     
 
-    shouldComponentUpdate(nextProps){
+    shouldComponentUpdate(nextProps) {
+
         return nextProps.dataSource !== this.props.dataSource;
-        // return false;
     }
 
     getJSONVal(){
@@ -35,25 +36,20 @@ export default class WordCloudWidget extends React.Component {
     }
 
     render() {
-        // debugger;
-        // const textAttr = this.getTextAttr();
-        // const valAttr = this.getValueAttr();
-
+        debugger;
         // var dataToRender = [];
-        // if(this.props.dataSource.status === "available"){
-        //     var i=0;
-        //     // for(i=0; i< this.props.dataSource.totalCount; i++) {
-        //     for(i=0; i< this.props.dataSource.items.length; i++) {
-        //         dataToRender.push({
-        //             text: this.props.textAttrib(this.props.dataSource.items[i]).value, 
-        //             value: this.props.intAttrib(this.props.dataSource.items[i]).value
+        
+        // if (this.props.dataSource.status === "available" && this.props.dataSource.items) {            
+        //     var i = 0;
+        //                 for (i = 0; i < this.props.dataSource.items.length; i++) {
+        //         dataToRender.push({                                       
+        //             text: this.props.textAttrib.get((this.props.dataSource.items[i])).value,
+        //             value: this.props.intAttrib.get((this.props.dataSource.items[i])).value
         //         });
         //     }
         // }
-        // return <WordCloudWidgetComponent inputData={dataToRender} chosenWord={this.props.chosenWord} onClickAction={this.props.onClickAction}/>;
-
         const inputDataToRender = this.getJSONVal();
-        return <WordCloudWidgetComponent inputData={inputDataToRender} chosenWord={this.props.chosenWord} onClickAction={this.props.onClickAction}/>;
+        return <WordCloudWidgetComponent inputData={inputDataToRender} chosenWord={this.props.chosenWord} onClickAction={this.props.onClickAction} width={this.props.tagCloudWidth} height={this.props.tagCloudHeight} padding={this.props.tagCloudPadding} />;
 
     }
 }
