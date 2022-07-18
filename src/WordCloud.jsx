@@ -36,7 +36,6 @@ export default class WordCloudWidget extends Component {
     }
 
     render() {
-        debugger;
         // var dataToRender = [];
         
         // if (this.props.dataSource.status === "available" && this.props.dataSource.items) {            
