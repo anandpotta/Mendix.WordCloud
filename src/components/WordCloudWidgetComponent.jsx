@@ -9,8 +9,12 @@ import WordCloud from "react-d3-cloud";
 export default function WordCloudWidgetComponent(props) {
   
   const data = props.inputData;
+  debugger;
+
   const fontSizeMapper = word => Math.log2(word.value) * 5;
-  const rotate = word => (Math.floor(Math.random() * 2) * 90);
+  const fontSize = (word) => Math.log2(word.value) * 5;
+  const rotate = word => (Math.floor(Math.random() * 2) * 0);
+
   const onClickHandle = (text) => {
     
     (props.onClickAction.canExecute && !props.onClickAction.isExecuting)
@@ -22,8 +26,6 @@ export default function WordCloudWidgetComponent(props) {
   };
 
   return (
-
-    <WordCloud data={data} fontSizeMapper={fontSizeMapper} rotate={rotate} onWordClick={(event, word) => onClickHandle(word.text)} />
-
+    <WordCloud data={data} fontSizeMapper={fontSizeMapper} fontSize={fontSize} rotate={rotate} width={props.width} height={props.height} padding={props.padding} onWordClick={(event, word) => onClickHandle(word.text)} />
   );
 }
